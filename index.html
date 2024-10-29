@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Writing Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Londrina+Sketch&display=swap"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Kalnia+Glaze:wght@100..700&family=Londrina+Shadow&family=Londrina+Sketch&display=swap"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet">
+
+  </head>
+  <body>
+    <h1 class="portfolio-title">Courtney Thompson</h1>
+    <div class="main-box">
+      <div class="flex-container">
+        <div class="piece1">Writing Portfolio</div>
+        <div class="piece2">
+          <ul class="inline-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Navigation Bar -->
+    <section id="portfolio-nav">
+      <ul class="category-nav" id="category-nav">
+        <li><a href="#" onclick="showCategory('marketing');keepColor(this)">Marketing Writing</a></li>
+        <li><a href="#" onclick="showCategory('creative');keepColor(this)">Creative Writing</a></li>
+        <li><a href="#" onclick="showCategory('technical');keepColor(this)">Technical Writing</a></li>
+        <li><a href="#" onclick="showCategory('blog');keepColor(this)">Blog Posts</a></li>
+      </ul>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+      <!-- Content will be dynamically loaded here -->
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Courtney Thompson. All rights reserved.</p>
+    </footer>
+  </body>
+  <script src="dummydata.js"></script>
+  <script src="script.js"></script>
+</html>
