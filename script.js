@@ -1,4 +1,4 @@
-//active color on click event
+// Active color on click event
 function keepColor(clickedElement) {
   const navButtons = document.querySelectorAll('#category-nav li a');
   navButtons.forEach(button => {
@@ -8,9 +8,9 @@ function keepColor(clickedElement) {
 }
 
 const portfolioSection = document.getElementById('portfolio');
-//show category on click event
-function showCategory(category) {
 
+// Show category on click event
+function showCategory(category) {
   portfolioSection.innerHTML = '';
 
   const categoryData = portfolioData[category];
@@ -18,33 +18,49 @@ function showCategory(category) {
   populateList(categoryData);
 }
 
+// Populate list with each item in categoryData
 function populateList(categoryData) {
-
   if (categoryData) {
-
     categoryData.forEach(item => {
       const article = document.createElement('article');
+      
+      // Add image if present
+      if (item.image) {
+        const image = document.createElement('img');
+        image.src = item.image;
+        image.alt = item.title;
+        image.classList.add('portfolio-image');
+        article.appendChild(image);
+      }
+
+      // Subtitle, title, and description
+      const subtitle = document.createElement('p');
+      subtitle.classList.add('subtitle');
+      subtitle.textContent = item.subtitle || '';
+
       const title = document.createElement('h4');
       title.textContent = item.title;
-
-      const subtitle = document.createElement('subtitle');
-      subtitle.textContent = item.subtitle;
 
       const description = document.createElement('p');
       description.textContent = item.description;
 
-      const link = document.createElement('a');
-      link.href = item.link;
-      link.textContent = "Read more";
-
+      // Append elements to the article
       article.appendChild(subtitle);
       article.appendChild(title);
       article.appendChild(description);
-      article.appendChild(link);
+      article.appendChild(buildArticleLink(item));
 
+      // Add article to portfolio section
       portfolioSection.appendChild(article);
-
     });
   }
 }
 
+// Build article link
+function buildArticleLink(item) {
+  const link = document.createElement('a');
+  link.href = item.link;
+  link.target = '_blank';
+  link.textContent = "Read more";
+  return link;
+}

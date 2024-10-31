@@ -60,9 +60,8 @@
   color: #470c0c
 }
 
-/* Top-right text with inline list */
 .piece2 {
-  position: absolute; /* Absolute positioning relative to flex container */
+  position: absolute;
   top: 0;
   right: 0;
   margin: 10px;
@@ -81,20 +80,19 @@
   color: #FFBF22;
 }
 
-/* Styling for inline list */
 .inline-list {
-  list-style-type: none; /* Remove bullet points */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
-  display: flex; /* Make list items display inline */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
 .inline-list li {
-  margin-left: 15px; /* Space between list items */
+  margin-left: 15px;
 }
 
 .inline-list li:first-child {
-  margin-left: 0; /* No margin for the first item */
+  margin-left: 0;
 }
 
 
@@ -121,75 +119,7 @@
   text-transform: uppercase;
   font-weight: 400;
 }
-  
- 
 
-
-/*OLD STYLING
-
- .portfolio-subtitle {
-    font-family: "Fredericka the Great", serif;
-    text-align: center;
-    font-size: 2rem;
-    margin: 1rem 0;
-    color: #333333;
-  }
-
-  .flex-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 200px;
-    border: 1px solid #333;
-    padding: 10px;
-  }
-
-  header {
-    background: #caebf2;
-    color: #470c0c;
-    padding: 0.5rem;
-  }
-
-  green-color: #419d5c;
-
-  .main-nav a:hover {
-    color: #FFBF22;
-  }
-  
-  /*
-  header nav {
-    display: flex;
-    justify-content: flex-end; /* Aligns the navigation items to the right */
- /* }
-  
-  
-.main-nav {
-  position: absolute; /* Allows positioning relative to the flex container */
-/*  top: 0; /* Aligns to the top of the container */
-/*  right: 0; /* Aligns to the right of the container */
-/*  margin: 10px; /* Optional margin to create some space from the edges
-}
-
-.main-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.main-nav li {
-  margin-left: 15px;
-  font-size: 1rem;
-  list-style: none;
-  color: #470c0c;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.main-nav li:first-child {
-  margin-left: 0; /* No margin for the first list item */
-/*} */
   
   /* Category Navigation Bar */
   #portfolio-nav {
@@ -231,25 +161,54 @@
     color: #202221;
   }
   
+
+
   /* Portfolio Section */
   #portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr [col-start]);
+    gap: 3rem;
     padding: 2rem;
-    text-align: center;
-  }
-  
-  article {
-    background: white;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    margin-bottom: 2rem;
-    text-align: left;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto 40px auto 40px;
+    text-align: start;
   }
 
-  subtitle {
+  #portfolio article {
+  background: white;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .portfolio-image {
+    width: 12%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 0;
+  }
+
+  #portfolio subtitle {
     text-align: right;
+  }
+
+  #portfolio h4 {
+    text-align: left;
+  }
+
+  #portfolio a {
+    padding-bottom: 10px;
+    text-align: left;
+    position: relative;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: black;
+  }
+
+  #portfolio a:visited {
+    color: navy;
   }
   
   footer {
