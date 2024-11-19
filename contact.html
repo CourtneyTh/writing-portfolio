@@ -37,28 +37,28 @@
         </div>
       </div>
     </div>
-
-    <!-- Category Navigation Bar -->
-    <section id="portfolio-nav">
-      <ul class="category-nav" id="category-nav">
-        <li><a href="#" onclick="showCategory('marketing');keepColor(this)">Marketing Writing</a></li>
-        <li><a href="#" onclick="showCategory('creative');keepColor(this)">Creative Writing</a></li>
-        <li><a href="#" onclick="showCategory('technical');keepColor(this)">Technical Writing</a></li>
-        <li><a href="#" onclick="showCategory('blog');keepColor(this)">Blog Posts</a></li>
-      </ul>
-    </section>
-
-    <!-- Portfolio Section -->
-    <div class="portfolio-content">
-    <section id="portfolio">
-      <!-- Content will be dynamically loaded here -->
-    </section>
-  </div>
-
+    <div class="contact-box">
+      <h2 class="contact-title">Get in Touch</h2>
+      <p class="contact-text">
+        If you would like to get in touch about a job opportunity, an interesting project, or anything writing-related, I would love to connect! Please use the form below, and I will get back to you soon.
+      </p>
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="dd0be4c5-c634-4e03-968b-8147809629eb">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+    
+        <label for="message">Write your message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+    
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    
     <footer>
-      <p>&copy; 2024 Courtney Thompson. All rights reserved.</p>
-    </footer>
+        <p>&copy; 2024 Courtney Thompson. All rights reserved.</p>
+      </footer>
   </body>
-  <script src="dummydata.js"></script>
-  <script src="script.js"></script>
-</html>
+  </html>
